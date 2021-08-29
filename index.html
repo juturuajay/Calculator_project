@@ -1,0 +1,115 @@
+
+<html>
+    <head>
+        <title> Calculator </title>
+        <h1><center>Calculator</center></h1>
+           <style>
+               *{margin:20px;padding:0}
+               .calc{width:400px;height:500px;background-color:#666666;padding:10px;border-radius:10px;margin:auto;}
+               .result{width:95%;height:15%;border-radius:10px;font-size:55px;margin:auto;display:block;padding:5px;border:2px solid:red }
+               #key{margin:11px;width:65px;height:60px;border-radius:5px;font-size:2em;}
+               #add{height:140px;float:right; }
+           </style>0 
+    </head>
+    <body bgcolor="aqua">
+        <div class="calc">
+            <form>
+                <input id="result" class="result" type="text" value="">
+                <input type="button" class="key" id="ce" onclick="funce();" value="CE">
+                <input type="button" class="key" id="mod" onclick="funmod();" value="%">
+                <input type="button" class="key" id="div" onclick="fundiv();" value="/">
+                <input type="button" class="key" id="backspace" onclick="fun_backspace();" value="<-">
+                <input type="button" class="key" id="seven" onclick="fun7();" value="7">
+                <input type="button" class="key" id="eight" onclick="fun8();" value="8">
+                <input type="button" class="key" id="nine" onclick="fun9();" value="9">
+                <input type="button" class="key" id="mul" onclick="funmul();" value="x">
+                <input type="button" class="key" id="four" onclick="fun4();" value="4">
+                <input type="button" class="key" id="five" onclick="fun5();" value="5">
+                <input type="button" class="key" id="six" onclick="fun6();" value="6">
+                <input type="button" class="key" id="sub" onclick="funsub();" value="-">
+                <input type="button" class="key" id="one" onclick="fun1();" value="1">
+                <input type="button" class="key" id="two" onclick="fun2();" value="2">
+                <input type="button" class="key" id="three" onclick="fun3();" value="3">
+                <input type="button" class="key" id="add" onclick="funadd();" value="+">
+                <input type="button" class="key" id="zero" onclick="fun0();" value="0">
+                <input type="button" class="key" id="pul" onclick="funstop();" value=".">
+                <input type="button" class="key" id="equalto" onclick="calculate();" value="=" accesskey="m">
+            
+            </form>
+        </div>
+        <script>
+            var input;
+            function funce(){
+                document.getElementById("result").value="0";
+            }
+            function fun1(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+"1";
+            }
+            function fun2(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+"2";
+            }
+            function fun3(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+"3";
+            }
+            function fun4(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+"4";
+            }
+            function fun5(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+"5";
+            }
+            function fun6(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+"6";
+            }
+            function fun7(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+"7";
+            }
+            function fun8(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+"8";
+            }
+            function fun9(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+"9";
+            }
+            function fun0(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+"0";
+            }
+            function funstop(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+".";
+            }
+            function fun_backspace(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input.slice(0,(input.length)-1);
+            }
+            function funadd(){
+                input=document.getElementById("result").value; 
+                    document.getElementById("result").value=input+ "+";
+            }
+            function funsub(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+ "-";
+            }
+            function funmul(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+ "*";
+            }
+            function funmod(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+ "%";
+            }
+            function calculate(){
+                input=document.getElementById("result").value;
+                document.getElementById("result").value=eval(input);
+            }
+        </script>
+    </body>
+</html>
