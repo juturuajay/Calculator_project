@@ -6,7 +6,7 @@
            <style>
                *{margin:20px;padding:0}
                .calc{width:400px;height:500px;background-color:#666666;padding:10px;border-radius:10px;margin:auto;}
-               .result{width:95%;height:15%;border-radius:10px;font-size:55px;margin:auto;display:block;padding:5px;border:2px solid:red }
+               .result{width:95%;height:15%;border-radius:10px;font-size:55px;margin:auto;display:block;padding:5px;border:2px solid red }
                .key{margin:11px;width:65px;height:60px;border-radius:5px;font-size:25;}
                #add{height:140px;float:right; }
            </style>
@@ -105,6 +105,10 @@
             function funmod(){
                 input=document.getElementById("result").value;
                     document.getElementById("result").value=input+ "%";
+            }
+            function fundiv(){
+                input=document.getElementById("result").value;
+                    document.getElementById("result").value=input+ "/";
             }
             function calculate(){
                 input=document.getElementById("result").value;
